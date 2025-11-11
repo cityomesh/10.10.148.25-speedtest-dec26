@@ -11,7 +11,10 @@ $clients = [
   [ "name" => "StreamTv CDN", "ip" => "103.189.178.120/streamtv" ],
   [ "name" => "ZYETEL", "ip" => "192.168.80.218" ],
   [ "name" => "Aeronet BB Tarnaka", "ip" => "192.168.80.178" ],
-  [ "name" => "Jeebr", "ip" => "192.168.80.202" ]
+  [ "name" => "Jeebr", "ip" => "192.168.80.202" ],
+  [ "name" => "ONEBB Mumbai", "ip" => "92.168.80.222" ],
+  [ "name" => "ONEBB Delhi", "ip" => "192.168.80.238" ],
+  [ "name" => "ONEBB Bangalore", "ip" => "192.168.90.70" ]
 ];
 
 $results = [];

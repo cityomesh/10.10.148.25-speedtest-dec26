@@ -1754,13 +1754,29 @@ var SPEEDTEST_SERVERS = [
     getIpURL: "backend/getIP.php"
   },
     {
-    name: "Giganet IPTV Mumbai",
-    server: "//103.98.7.234/",
-    dlURL: "backend/garbage.php",
-    ulURL: "backend/empty.php",
-    pingURL: "backend/empty.php",
-    getIpURL: "backend/getIP.php"
-  },
+      name: "ONEBB Mumbai",
+      server: "//192.168.80.222/",
+      dlURL: "backend/garbage.php",
+      ulURL: "backend/empty.php",
+      pingURL: "backend/empty.php",
+      getIpURL: "backend/getIP.php"
+    }, 
+      {
+      name: "ONEBB Delhi",
+      server: "//192.168.80.238/",
+      dlURL: "backend/garbage.php",
+      ulURL: "backend/empty.php",
+      pingURL: "backend/empty.php",
+      getIpURL: "backend/getIP.php"
+    },
+    {
+      name: "ONEBB Bangalore",
+      server: "//192.168.90.70/",
+      dlURL: "backend/garbage.php",
+      ulURL: "backend/empty.php",
+      pingURL: "backend/empty.php",
+      getIpURL: "backend/getIP.php"
+    },
     {
     name: "VijayWada Bsnl",
     server: "//192.168.80.2/",
@@ -1801,6 +1817,14 @@ var SPEEDTEST_SERVERS = [
     pingURL: "backend/empty.php",
     getIpURL: "backend/getIP.php"
   },
+   {
+    name: "Giganet IPTV Mumbai",
+    server: "//103.98.7.234/",
+    dlURL: "backend/garbage.php",
+    ulURL: "backend/empty.php",
+    pingURL: "backend/empty.php",
+    getIpURL: "backend/getIP.php"
+  },
   {
     name: "Aeronet BB Tarnaka",
     server: "//192.168.80.178/",
@@ -1820,6 +1844,9 @@ var SPEEDTEST_SERVERS = [
 ];
 
 const CLIENTS = [
+  { name: "ONEBB Mumbai", ip: "192.168.80.222" },
+  { name: "ONEBB Delhi", ip: "192.168.80.238"},
+  { name: "ONEBB Bangalore", ip: "192.168.90.70"},
   { name: "Giganet IPTV Mumbai", ip: "103.98.7.234" },
   { name: "VijayWada Bsnl", ip: "192.168.80.50" },
   { name: "BSNL HYDERABAD", ip: "192.168.80.50" },
@@ -1844,21 +1871,17 @@ async function testPing(server) {
   }
 }
 
-
 async function testAllServers() {
   for (const server of SPEEDTEST_SERVERS) {
     await testPing(server);  // ✅ correct function call
   }
 }
 
-
-// Call before starting test
 testAllServers();
 testPing(SPEEDTEST_SERVERS[0]); // ✅ Main CDN server test
 
 var s=new Speedtest(); //create speed test object
 s.setParameter("telemetry_level","basic"); //enable basic telemetry (for results sharing)
-
 
 function initServers() {
   if (SPEEDTEST_SERVERS.length == 0) {
