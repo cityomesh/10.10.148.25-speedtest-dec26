@@ -2189,11 +2189,18 @@ var uiData = null;
               I("testId").parentElement.style.display = "none";
             }
 
+            // if (selectedServer) {
+            //   I("serverUsed").textContent =
+            //     hostUsed + " → " + selectedServer.name;
+            // }
+
+
+
             if (selectedServer) {
               I("serverUsed").textContent =
                 hostUsed + " → " + selectedServer.name;
             }
-
+            
             I("shareIp").textContent = ip;
             I("sharePing").textContent = ping;
             I("shareJitter").textContent = jitter;
