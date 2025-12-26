@@ -106,3 +106,4 @@ along with this program.  If not, see <https://www.gnu.org/licenses/lgpl>.
 # MainCdnServer
 # 10.10.148.25ulkamaincdnserver
 # 10.10.148.25mainproject
+# 10.10.148.25-speedtest-dec26
